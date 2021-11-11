@@ -1,0 +1,219 @@
+@import "buttons";
+
+header {}
+
+.banner {
+    position: relative;
+
+    .main-head-my-content {
+        margin-top: 270px;
+        padding: 0px 120px;
+
+        h1 {
+            font-size: 57px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            line-height: 1.2;
+            color: #080a3c;
+        }
+
+        p {
+            margin-top: 18px;
+            max-width: 540px;
+            color: #4a6f8a;
+            margin-bottom: 12px;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        a {
+            background-color: #13c4a1;
+            border: 1px solid #13c4a1;
+            text-align: center;
+            color: #fff;
+            border-radius: 5px;
+            font-weight: 500;
+            font-size: 15px;
+            padding: 13px 25px;
+            text-decoration: none;
+            margin-left: 10px;
+            border: 1px solid #080a3c;
+            background-color: #080a3c;
+            margin-left: 0;
+
+            i {
+                margin-top: 30px;
+                color: #ff612f;
+                font-size: 20px;
+                margin-right: 5px;
+
+            }
+        }
+    }
+
+    .owl-carousel {
+        position: relative;
+
+        .owl-stage-outer {
+            .owl-stage {
+                .owl-item {
+
+                    // width: 633px !important;
+                    // margin-right: 0 !important;
+                    .inner-owl-item {
+                        //    position: relative;
+                        //    right: -20px;
+                        height: 100vh;
+                        border-bottom-left-radius: 70px;
+                    }
+
+                    .inner-owl-item1 {
+                        background-image: url("../img/banner-img1.jpg");
+                        background-position: center center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+
+                    }
+
+                    .inner-owl-item2 {
+                        background-image: url("../img/banner-img2.jpg");
+                        background-position: center center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                    }
+
+                    .inner-owl-item3 {
+                        background-image: url("../img/banner-img3.jpg");
+                        background-position: center center;
+                        background-size: cover;
+                        background-repeat: no-repeat;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .shape19 {
+        position: absolute;
+        right: 35%;
+        bottom: -25px;
+        z-index: -1;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            animation: moveLeftBounce 3s linear infinite;
+        }
+    }
+
+    .shape20 {
+        position: absolute;
+        right: 55%;
+        bottom: 5%;
+        z-index: -1;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            animation: moveLeftBounce 3s linear infinite;
+        }
+    }
+
+    .shape21 {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: -1;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            animation: top 3s linear infinite;
+        }
+
+        @keyframes top {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    }
+
+    .shape22 {
+        position: absolute;
+        left: 5%;
+        top: 15%;
+        z-index: -1;
+        animation: flexible 10s linear infinite;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @keyframes flexible {
+            0% {
+                left: 5%;
+                top: 15%;
+            }
+
+            25% {
+                left: 15%;
+                top: 20%;
+            }
+
+            50% {
+                left: 15%;
+                top: 10%;
+            }
+
+            75% {
+                left: 30%;
+                top: 20%;
+            }
+
+            100% {
+                left: 5%;
+                top: 15%;
+            }
+        }
+    }
+
+    .shape24 {
+        position: absolute;
+        left: 25%;
+        top: 40%;
+        z-index: -1;
+        animation: flexible 15s linear infinite;
+
+
+        img {
+            max-width: 100%;
+            height: auto;
+            animation: moveLeftBounce 3s linear infinite;
+        }
+    }
+
+    .shape26 {
+        position: absolute;
+        left: 30%;
+        top: 15%;
+        z-index: -1;
+
+        img {
+            max-width: 100%;
+            height: auto;
+            animation: moveLeftBounce 3s linear infinite;
+        }
+    }
+
+}
