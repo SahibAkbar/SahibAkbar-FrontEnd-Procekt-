@@ -3260,6 +3260,8 @@
 
 body {
   color: #080a3c;
-  font-family: "Poppins"sans-serif;
+  background-color: #fff;
+  font-size: 15px;
+  font-family: poppins, sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
