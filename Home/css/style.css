@@ -1,3 +1,43 @@
+@media only screen and (max-width: 992px) {
+  #marketings::before {
+    display: none;
+  }
+  .ui-desgn {
+    text-align: center;
+  }
+  #marketings .marketing-image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #marketings .marketing-image img {
+    height: auto;
+  }
+  .ordr1 {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .ordr2 {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #video .questions {
+    padding: 25px;
+    text-align: center;
+    margin-left: 0;
+    margin-top: 10px;
+    margin-right: 0;
+  }
+}
+
 .navbar-area .nav-strax-logo .navbar .mean-menu .navbar-button .btn-strax1, .navbar-area .nav-strax-logo .navbar .mean-menu .navbar-button .btn-strax2, #UX-Design .ui-desgn .ui-clk, #marketings .ui-desgn .marketing-clk {
   padding: 14px 22px;
   font-size: 15px;
@@ -351,6 +391,166 @@
   border-radius: 6px;
 }
 
+.loading {
+  position: fixed;
+  top: 0;
+  background-color: #ff612f;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99999;
+  text-align: center;
+}
+
+.loading .hereket {
+  width: 4em;
+  height: 4em;
+  -webkit-transform: perspective(20em) rotateX(-24deg) rotateY(20deg) rotateZ(30deg);
+          transform: perspective(20em) rotateX(-24deg) rotateY(20deg) rotateZ(30deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 45%;
+  -webkit-transform: translateY(-45%);
+          transform: translateY(-45%);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.loading .hereket::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  right: 0;
+  bottom: 0;
+  border: 2px dotted #fff;
+  margin: -15px;
+}
+
+.loading .hereket .top {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-animation: hereket 6s linear infinite;
+          animation: hereket 6s linear infinite;
+}
+
+.loading .hereket .top .disk {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: .3em dotted #fff;
+}
+
+.loading .hereket .top .disk:nth-child(1) {
+  -webkit-animation: disk1 12s linear infinite;
+          animation: disk1 12s linear infinite;
+}
+
+.loading .hereket .top .disk:nth-child(2) {
+  -webkit-animation: disk2 12s linear infinite;
+          animation: disk2 12s linear infinite;
+}
+
+.loading .hereket .top .disk:nth-child(3) {
+  -webkit-animation: disk3 12s linear infinite;
+          animation: disk3 12s linear infinite;
+}
+
+@-webkit-keyframes hereket {
+  0% {
+    -webkit-transform: rotateX(360deg) rotateY(0deg);
+            transform: rotateX(360deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) rotateY(360deg);
+            transform: rotateX(0deg) rotateY(360deg);
+  }
+}
+
+@keyframes hereket {
+  0% {
+    -webkit-transform: rotateX(360deg) rotateY(0deg);
+            transform: rotateX(360deg) rotateY(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(0deg) rotateY(360deg);
+            transform: rotateX(0deg) rotateY(360deg);
+  }
+}
+
+@-webkit-keyframes disk1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes disk1 {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes disk2 {
+  0% {
+    -webkit-transform: rotateX(90deg) rotateZ(0deg);
+            transform: rotateX(90deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(90deg) rotateZ(360deg);
+            transform: rotateX(90deg) rotateZ(360deg);
+  }
+}
+
+@keyframes disk2 {
+  0% {
+    -webkit-transform: rotateX(90deg) rotateZ(0deg);
+            transform: rotateX(90deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateX(90deg) rotateZ(360deg);
+            transform: rotateX(90deg) rotateZ(360deg);
+  }
+}
+
+@-webkit-keyframes disk3 {
+  0% {
+    -webkit-transform: rotateY(90deg) rotateZ(0deg);
+            transform: rotateY(90deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(90deg) rotateZ(360deg);
+            transform: rotateY(90deg) rotateZ(360deg);
+  }
+}
+
+@keyframes disk3 {
+  0% {
+    -webkit-transform: rotateY(90deg) rotateZ(0deg);
+            transform: rotateY(90deg) rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateY(90deg) rotateZ(360deg);
+            transform: rotateY(90deg) rotateZ(360deg);
+  }
+}
+
 .banner {
   position: relative;
 }
@@ -675,6 +875,7 @@
 #UX-Design .ui-desgn .ui-image img {
   max-width: 100%;
   height: auto;
+  height: auto;
 }
 
 #UX-Design .ui-desgn h2 {
@@ -766,6 +967,7 @@
 
 #UX-Design .ui-custom-image {
   width: 100%;
+  height: 100%;
   -webkit-transform: translateX(720px);
           transform: translateX(720px);
   -webkit-transition: all 1s linear;
@@ -1239,6 +1441,7 @@
   right: 50px;
   color: #f5f5f5;
   font-size: 100px;
+  z-index: -1;
 }
 
 #aboutStrax .strax-about .about-img {
@@ -2710,18 +2913,46 @@
 
 #subscribe .content-sbs .yeniform input::-webkit-input-placeholder {
   color: white;
+  opacity: 1;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 #subscribe .content-sbs .yeniform input:-ms-input-placeholder {
   color: white;
+  opacity: 1;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 #subscribe .content-sbs .yeniform input::-ms-input-placeholder {
   color: white;
+  opacity: 1;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 #subscribe .content-sbs .yeniform input::placeholder {
   color: white;
+  opacity: 1;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+#subscribe .content-sbs .yeniform input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+#subscribe .content-sbs .yeniform input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+#subscribe .content-sbs .yeniform input:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+
+#subscribe .content-sbs .yeniform input:focus::placeholder {
+  opacity: 0;
 }
 
 #subscribe .content-sbs .yeniform button {

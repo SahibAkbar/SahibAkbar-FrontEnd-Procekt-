@@ -1,3 +1,23 @@
+// Load start
+
+$(window).on('load', function() {
+  if ($(".wow").length) {
+      var wow = new WOW({
+          boxClass: 'wow',
+          animateClass: 'animated',
+          offset: 20,
+          mobile: true,
+          live: true,
+      });
+      wow.init();
+  }
+});
+$(window).on('load', function() {
+  $('.loading').fadeOut();
+});
+
+//Load end
+
 
 
   $('.myby').owlCarousel({
@@ -84,8 +104,6 @@ aze.onmousemove = function (e) {
 
 
 
-
-
 let UXDesign = document.getElementById("UX-Design");
 let screenPosition = document.querySelector(".ui-custom-image");
 window.addEventListener("scroll", () => {
@@ -153,17 +171,30 @@ Top.addEventListener("click", (e) => {
 
 
 
+// Accordion start
+
 
 const accordion = document.getElementsByClassName('accordion-item');
-for (let i = 0; i < accordion.length; i++) {
-  accordion[i].addEventListener('click',function (e) {
+const accordiontitle = document.getElementsByClassName('accordion-title');
+
+for (let i = 0; i < accordiontitle.length; i++) {
+  accordiontitle[i].addEventListener('click', e=> {
     e.preventDefault();
-    this.classList.toggle('active')
-  })  
+
+    for (let j = 0; j < accordion.length; j++) {
+      if (!accordion[i].classList.contains('active')) {
+        accordion[j].classList.remove('active')
+      }
+    }
+    accordion[i].classList.toggle('active')
+  })
 }
 
+// Accardion End
 
 
+
+// Navbar Start
 window.addEventListener("scroll", (e) => {
   if (window.pageYOffset > 100) {
     document.querySelector(".navbar-area").classList.add("active"); 
@@ -174,7 +205,7 @@ window.addEventListener("scroll", (e) => {
 });
 
 
-
+// Navbar End
 
 
 
@@ -215,3 +246,30 @@ monthly.addEventListener("click", (e) => {
     PricingTablePrivate[i].classList.remove("active");
   }
 });
+
+
+
+// Video Start
+
+$(document).ready(function(){
+  $(".videoplay").magnificPopup({
+    type:'iframe',
+    iframe: {
+      markup: '<div class="mfp-iframe-scaler">'+
+                '<div class="mfp-close"></div>'+
+                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+              '</div>',
+      patterns: {
+        youtube: {
+          index: 'youtube.com/',
+          id: 'v=',
+          src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+        },
+      },
+    
+      srcAction: 'iframe_src',
+    }
+  })
+})
+
+// Video End

@@ -1,3 +1,24 @@
+// Load start
+
+$(window).on('load', function() {
+  if ($(".wow").length) {
+      var wow = new WOW({
+          boxClass: 'wow',
+          animateClass: 'animated',
+          offset: 20,
+          mobile: true,
+          live: true,
+      });
+      wow.init();
+  }
+});
+$(window).on('load', function() {
+  $('.loading').fadeOut();
+});
+
+//Load end
+
+
 window.addEventListener("scroll", (e) => {
     if (window.pageYOffset > 100) {
       document.querySelector(".navbar-area").classList.add("active"); 
@@ -99,10 +120,25 @@ monthly.addEventListener("click", (e) => {
 });
 
 
+
+// Accordion start
+
+
 const accordion = document.getElementsByClassName('accordion-item');
-for (let i = 0; i < accordion.length; i++) {
-  accordion[i].addEventListener('click',function (e) {
+const accordiontitle = document.getElementsByClassName('accordion-title');
+
+for (let i = 0; i < accordiontitle.length; i++) {
+  accordiontitle[i].addEventListener('click', e=> {
     e.preventDefault();
-    this.classList.toggle('active')
-  })  
+
+    for (let j = 0; j < accordion.length; j++) {
+      if (!accordion[i].classList.contains('active')) {
+        accordion[j].classList.remove('active')
+      }
+    }
+    accordion[i].classList.toggle('active')
+  })
 }
+
+// Accardion End
+

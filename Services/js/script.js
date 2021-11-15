@@ -1,3 +1,23 @@
+// Load start
+
+$(window).on('load', function() {
+  if ($(".wow").length) {
+      var wow = new WOW({
+          boxClass: 'wow',
+          animateClass: 'animated',
+          offset: 20,
+          mobile: true,
+          live: true,
+      });
+      wow.init();
+  }
+});
+$(window).on('load', function() {
+  $('.loading').fadeOut();
+});
+
+//Load end
+
 window.addEventListener("scroll", (e) => {
     if (window.pageYOffset > 100) {
       document.querySelector(".navbar-area").classList.add("active"); 
@@ -99,3 +119,31 @@ monthly.addEventListener("click", (e) => {
     PricingTablePrivate[i].classList.remove("active");
   }
 });
+
+
+
+
+// Video Start
+
+$(document).ready(function(){
+  $(".videoplay").magnificPopup({
+    type:'iframe',
+    iframe: {
+      markup: '<div class="mfp-iframe-scaler">'+
+                '<div class="mfp-close"></div>'+
+                '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>'+
+              '</div>',
+      patterns: {
+        youtube: {
+          index: 'youtube.com/',
+          id: 'v=',
+          src: 'https://www.youtube.com/embed/%id%?autoplay=1'
+        },
+      },
+    
+      srcAction: 'iframe_src',
+    }
+  })
+})
+
+// Video End

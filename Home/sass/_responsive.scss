@@ -1,0 +1,38 @@
+@media only screen and(max-width: 992px) {
+    #marketings::before {
+        display: none;
+    }
+
+    .ui-desgn {
+        text-align: center;
+    }
+
+    #marketings .marketing-image {
+        display: flex;
+        align-items: center;
+
+        img {
+            height: auto;
+        }
+    }
+
+    .ordr1 {
+        order: 2;
+    }
+
+    .ordr2 {
+        order: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #video {
+        .questions {
+            padding: 25px;
+            text-align: center;
+            margin-left: 0;
+            margin-top: 10px;
+            margin-right: 0;
+        }
+    }
+}
